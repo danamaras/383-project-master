@@ -1,0 +1,12 @@
+[Unit]
+Description=Example "hello world" service
+After=network.target
+
+[Service]
+Type=exec
+User=vagrant
+WorkingDirectory=/opt
+ExecStart=/opt/hello-world
+
+[Install]
+WantedBy=multi-user.target
